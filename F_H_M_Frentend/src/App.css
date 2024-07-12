@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.custom-button {
+height: 3rem; /* Adjust the height as needed for !h-14 */
+transition: all 0.3s ease-out; /* Adjust the transition as needed */
+}
+
+.custom-button:hover {
+background-color: rgba(55, 8, 242, 0) !important;
+color: var(--bs-primary) !important;
+}
+
+.login-height {
+min-height: 100vh; /* Ensures the login component takes up full viewport height */
+}
+
+.background {
+  background-image: url('bg.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.form{
+  /* border: 2px solid black; */
+  width: 400px;
+}
