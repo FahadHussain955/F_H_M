@@ -1,8 +1,6 @@
 import Login from "../pages/login.js";
 import SignUp from "../pages/sign-up.js";
 import Home from "../pages/dashboard.js";
-import ForgetPassword from "../pages/forget-password.js";
-import ResetPassword from "../pages/reset-password.js";
 import Page404 from "../pages/no-data-found.js";
 import User from "../pages/User.js";
 
@@ -21,16 +19,7 @@ const routes = [
     pages: SignUp,
     isPublic: true,
   },
-  {
-    path: "/forget-password",
-    pages: ForgetPassword,
-    isPublic: true,
-  },
-  {
-    path: "/reset-password/:en",
-    pages: ResetPassword,
-    isPublic: true,
-  },
+
   {
     path: "/user",
     pages: User,

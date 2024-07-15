@@ -4,7 +4,6 @@ import { Content } from "antd/es/layout/layout";
 import { SideBar } from "../components/SideBar";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllCategory } from "../store/category/categorySlice";
 import { getAllUsers } from "../store/user/userSlice";
 import UserCategory from "../components/User/user-category";
 import UserDetail from "../components/User/user-detail";
@@ -19,7 +18,6 @@ export default function User() {
 
   useEffect(() => {
    const temp =  dispatch(getAllUsers());
-    dispatch(getAllCategory());
   }, []);
   return (
     <div className="h-full min-h-screen grid grid-columns">

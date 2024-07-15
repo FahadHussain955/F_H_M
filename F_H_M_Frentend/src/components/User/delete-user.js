@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Button, Modal, Typography, Layout, Flex, Image, Spin } from "antd";
 import { Svgs } from "../Svgs/svg-icons";
 import { useDispatch } from "react-redux";
-import { delete_Customer, delete_User } from "../../store/user/userSlice";
+import { delete_User } from "../../store/user/userSlice";
 import { toast } from "react-toastify";
-import { getAllClients } from "../../store/clients/clientsSlice";
 
 const { Text } = Typography;
 const { Content } = Layout;
@@ -34,7 +33,6 @@ const DeleteUser = ({ data, goBack }) => {
         if (response) {
           toast.success("User has been deleted");
           goBack?.();
-          dispatch(getAllClients());
           setIsModalOpen(false);
         } else {
           toast.error(response?.message || "Something went wrong");

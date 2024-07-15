@@ -10,7 +10,6 @@ import {
   Dropdown,
 } from "antd";
 import { Svgs } from "../Svgs/svg-icons";
-import ClientSubscription from "./client-subscription";
 import { useSelector } from "react-redux";
 import DeleteUser from "./delete-user";
 import EditUser from "./edit-user";
@@ -27,10 +26,6 @@ const UserDetail = ({ data, goBack }) => {
   const clientSubscription = useSelector(
     (state) => state?.clientSubscription?.clientSubscription
   );
-
-  // const clientProposal = useSelector(
-  //   (state) => state?.clientProposal?.clientProposal
-  // );
 
   const userDropdown = (record) => (
     <Menu className="!py-3 border border-[#DBDBDB] rounded-[5px] !shadow-none">
@@ -65,10 +60,10 @@ const UserDetail = ({ data, goBack }) => {
             className="cursor-pointer text-primary md:text-[32px] text-xl font-medium flex items-center justify-start gap-4 mb-3"
           >
             {Svgs.arrowback}
-            Customer Details
+            User Details
           </Text>
           <Text className="text-[#868687] text-sm font-normal mb-4 block">
-            You can see all details about the vendor here.
+            You can see all details about the User here.
           </Text>
         </Col>
         <Col>
@@ -124,10 +119,10 @@ const UserDetail = ({ data, goBack }) => {
               <div className="bg-white rounded-xl lg:p-5 p-3 card__shadow">
                 <div className="flex flex-col">
                   <Text className="md:text-xl text-lg font-medium text-gray">
-                    Client Stats:
+                    User Stats:
                   </Text>
                   <Text className="text-sm font-normal text-gray">
-                    You can see general stats of client here
+                    You can see general stats of User here
                   </Text>
                 </div>
                 <div className="grid lg:grid-cols-3 gap-3 mt-5">
@@ -160,8 +155,6 @@ const UserDetail = ({ data, goBack }) => {
             </Col>
           </Row>
         </Col>
-        <ClientSubscription clientSubscription={clientSubscription} />
-        {/* <VendorProposal clientProposal={clientProposal} /> */}
       </Row>
     </>
   );

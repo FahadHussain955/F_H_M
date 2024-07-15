@@ -12,9 +12,9 @@ import {
   Breadcrumb,
 } from "antd";
 import { Svgs } from "../Svgs/svg-icons";
-import ClientEmpty from "./client-empty";
 import EditUser from "./edit-user";
 import DeleteUser from "./delete-user";
+import UserDetail from "./user-detail";
 
 const { Search } = Input;
 const { Text } = Typography;
@@ -120,9 +120,6 @@ function UserCategory({ data }) {
             User
           </Text>
         </Col>
-        <Col>
-          {/* <AddUser /> */}
-        </Col>
       </Row>
       {data?.length && (
         <div className="flex gap-3 mb-5">
@@ -130,7 +127,7 @@ function UserCategory({ data }) {
             allowClear
             value={searchTerm}
             className="search-input-custom w-full max-w-[400px]"
-            placeholder="Search Service"
+            placeholder="Search User"
             onChange={(e) => handleSearch(e.target.value)}
           />
         </div>
@@ -148,7 +145,7 @@ function UserCategory({ data }) {
             }}
           />
         ) : (
-          <ClientEmpty />
+          <UserDetail />
         )}
       </div>
     </Layout>
